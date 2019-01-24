@@ -1,0 +1,33 @@
+    public int getBinary(int n){
+        int a = 0;
+        
+        for(int count = 1;n > 0;count *= 10){
+            int b = n % 2;
+            n = (n-b) / 2;
+            a += b*count;       
+        }
+        return a;
+        
+    }
+
+    int countOnes(int a){
+        int count = 0;
+        while(a>0){
+            int k = a%10;
+            a = ((a-k)/10);
+            if(k == 1 && a%10 == 0){
+                int r = ((a-a%10)/10);
+                if(r == 1){
+                    count++;
+                }
+                else{continue;}                
+            }
+            else{
+                continue;
+            }
+
+        }
+        
+        
+        return count;
+    }

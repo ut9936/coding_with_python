@@ -1,0 +1,23 @@
+forward_robot();
+    Serial.println("Robot Forward");
+    
+    
+    if(distance_front<=minimum_front)
+    {
+      tern_left();
+      
+    }
+    if(distance_front<=minimum_front && distance_left<=minimum_left)
+    {
+       tern_right();
+    
+    }
+    if(distance_front<=minimum_front && distance_right<=minimum_right)
+    {
+      tern_left();
+    }
+    if(distance_front<=minimum_front && distance_left<=minimum_left && distance_right<=minimum_right)
+    {
+      stop_robot();
+    }
+    delay(50);
